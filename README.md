@@ -1,13 +1,13 @@
 # Happy Case Filter
 
-> AI + 강화 키워드 이중 검증으로 순수 Happy Case만 필터링하는 스킬
+> AI + 강화 키워드 이중 검증으로 CSV에서 순수 Happy Case를 추출/필터링하는 통합 스킬
 
 ---
 
 ## 이 스킬은 무엇을 하나요?
 
-이미 작성된 TestRail 호환 CSV 파일을 분석하여 **순수 Happy Case만 필터링**해 새 CSV 파일을 생성합니다.
-AI(Claude) 분류 후 강화 키워드 스크립트로 이중 검증하여, Extractor보다 더 엄격하게 비-Happy 케이스를 제거합니다.
+이미 작성된 TestRail 호환 CSV 파일을 분석하여 **순수 Happy Case만 추출/필터링**해 새 CSV 파일을 생성합니다.
+AI(Claude) 분류 후 강화 키워드 스크립트로 이중 검증하여 비-Happy 케이스를 완전히 제거합니다.
 원본 파일은 절대 수정하지 않습니다.
 
 ---
@@ -26,21 +26,10 @@ AI(Claude) 분류 후 강화 키워드 스크립트로 이중 검증하여, Extr
 
 ## 어떤 상황에서 쓰나요?
 
-- Happy Case Extractor보다 더 엄격하게 필터링해야 할 때
+- 기존 CSV 테스트케이스에서 Happy Case만 추출해야 할 때
 - 오류/엣지 케이스가 조금이라도 혼입되면 안 되는 경우
 - 최고의 순수성이 필요한 스모크 테스트 세트 구성 시
 - 보안/품질 기준이 엄격한 프로젝트의 Happy Path 테스트
-
----
-
-## Extractor와의 차이점
-
-| 항목 | Happy Case Extractor | Happy Case Filter |
-|------|---------------------|-------------------|
-| 분류 방법 | AI 분류만 | AI 분류 + 강화 키워드 이중 검증 |
-| 필터 강도 | 일반 | 강화 (더 엄격) |
-| 검증 필드 | Title, Steps, Expected | Section, Section Hierarchy, Title, Steps, Expected 전체 |
-| 순수성 | 높음 | 매우 높음 |
 
 ---
 
