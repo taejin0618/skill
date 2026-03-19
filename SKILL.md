@@ -10,7 +10,9 @@ description: >
   출력: [원본파일명]_happy.csv 파일 (순수 Happy Case만 포함, 동일 7컬럼 형식)
 ---
 
-# Happy Case 필터링 스킬
+> **버전**: v1 | **출력**: 1개 파일 | **목적**: AI + 강화 키워드로 순수 Happy Case만 엄격 필터링
+
+# Happy Case 필터링 스킬 v1
 
 기존 TestRail 호환 CSV 파일을 분석하여 **순수 Happy Case(정상 성공 시나리오)만 필터링**해
 새 CSV 파일을 생성하는 후처리(filtering) 스킬이다.
