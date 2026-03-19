@@ -24,8 +24,7 @@ Figma, Jira, Confluence, PDF, 웹사이트 URL 등 다양한 입력에서 TestRa
 
 | 스킬 | 버전 | 입력 | 목적/적합한 상황 | 브랜치 |
 |------|------|------|----------------|--------|
-| Happy Case Extractor | v1 | 기존 CSV | AI 분류로 Happy Case만 추출 | `skill/happy-case-extractor` |
-| Happy Case Filter | v1 | 기존 CSV | AI + 강화 키워드 이중 검증으로 순수 필터링 | `skill/happy-case-filter` |
+| Happy Case Filter | v1 | 기존 CSV | AI + 강화 키워드 이중 검증으로 CSV Happy Case 추출/필터링 | `skill/happy-case-filter` |
 
 ---
 
@@ -37,8 +36,7 @@ Figma, Jira, Confluence, PDF, 웹사이트 URL 등 다양한 입력에서 TestRa
 커버리지 검증 필요?     → QA Testcase Lite (기본 추천)
 빠른 작성 필요?         → QA Testcase Minimal
 정상 플로우만?          → Happy Testcase Writer
-기존 CSV에서 추출?      → Happy Case Extractor
-기존 CSV 엄격히 필터?   → Happy Case Filter
+기존 CSV에서 Happy Case 추출/필터?  → Happy Case Filter
 ```
 
 ---
