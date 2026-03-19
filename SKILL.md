@@ -263,4 +263,6 @@ python scripts/testrail_upload_check.py [출력_파일_경로]
 □ testrail_upload_check.py 검증 통과?
 □ filter_happy_cases.py 실행 후 제거된 케이스가 모두 비-Happy인지 확인?
 □ AI 분류 결과와 스크립트 필터 결과가 일치하는지 확인?
+□ 필터링 결과가 0건이 아닌지 확인했는가?
+□ 0건인 경우 분류 기준 또는 입력 파일을 재검토했는가?
 ```
