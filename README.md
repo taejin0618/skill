@@ -12,32 +12,34 @@ Figma, Jira, Confluence, PDF, 웹사이트 URL 등 다양한 입력에서 TestRa
 
 ### 테스트 케이스 생성 스킬
 
-| 스킬 | 출력 파일 수 | 특징 | 브랜치 |
-|------|------------|------|--------|
-| Full QA Testcase Writer | 5개 | 가장 완전한 버전, 보안 테스트 CSV 분리 | `skill/full-qa-testcase-writer` |
-| QA Testcase Writer 2file v6 | 2개 | 7가지 커버리지 체크, 빠른 작성 | `skill/qa-testcase-writer-2file-v6` |
-| QA Testcase Writer 3file v6 | 3개 | 커버리지 검증 체크리스트 포함 | `skill/qa-testcase-writer-3file-v6` |
-| QA Testcase Writer 4file v3 | 4개 | 리스크 분석 포함 | `skill/qa-testcase-writer-4file-v3` |
-| Happy Testcase Writer | 1개 | 정상 플로우만, 39개 금지 키워드 자동 필터 | `skill/happy-testcase-writer` |
+| 스킬 | 버전 | 출력 | 목적/적합한 상황 | 브랜치 |
+|------|------|------|----------------|--------|
+| QA Testcase Writer - Full | v1 | 5개 파일 | 보안 테스트 분리 + 리스크 분석이 필요한 완전한 QA | `skill/qa-testcase-full` |
+| QA Testcase Writer - Standard | v1 | 4개 파일 | 리스크 분석 포함 표준 QA 테스트케이스 | `skill/qa-testcase-standard` |
+| QA Testcase Writer - Lite | v1 | 3개 파일 | 커버리지 검증 체크리스트 포함 (기본 추천) | `skill/qa-testcase-lite` |
+| QA Testcase Writer - Minimal | v1 | 2개 파일 | 빠른 테스트케이스 작성 (간소화 버전) | `skill/qa-testcase-minimal` |
+| Happy Testcase Writer | v1 | 1개 파일 | 정상 플로우만 포함하는 Happy Path 전용 | `skill/happy-testcase-writer` |
 
 ### Happy Case 처리 스킬
 
-| 스킬 | 입력 | 특징 | 브랜치 |
-|------|------|------|--------|
-| Happy Case Extractor | 기존 CSV | AI 분류로 Happy Case만 추출 | `skill/happy-case-extractor` |
-| Happy Case Filter | 기존 CSV | AI + 강화 키워드 이중 검증으로 필터링 | `skill/happy-case-filter` |
+| 스킬 | 버전 | 입력 | 목적/적합한 상황 | 브랜치 |
+|------|------|------|----------------|--------|
+| Happy Case Extractor | v1 | 기존 CSV | AI 분류로 Happy Case만 추출 | `skill/happy-case-extractor` |
+| Happy Case Filter | v1 | 기존 CSV | AI + 강화 키워드 이중 검증으로 순수 필터링 | `skill/happy-case-filter` |
 
 ---
 
 ## 어떤 스킬을 선택할까?
 
-- **처음 사용, 기능 전체 검증** → Full QA Testcase Writer
-- **빠른 테스트 케이스 작성** → 2file v6
-- **커버리지 문서도 필요** → 3file v6
-- **위험도 분석까지 필요** → 4file v3
-- **스모크 테스트 / 정상 경로만** → Happy Testcase Writer
-- **기존 CSV에서 Happy Case 추출** → Happy Case Extractor
-- **기존 CSV에서 엄격하게 필터링** → Happy Case Filter
+```
+보안 테스트 분리 필요? → QA Testcase Full
+리스크 분석 필요?       → QA Testcase Standard
+커버리지 검증 필요?     → QA Testcase Lite (기본 추천)
+빠른 작성 필요?         → QA Testcase Minimal
+정상 플로우만?          → Happy Testcase Writer
+기존 CSV에서 추출?      → Happy Case Extractor
+기존 CSV 엄격히 필터?   → Happy Case Filter
+```
 
 ---
 
